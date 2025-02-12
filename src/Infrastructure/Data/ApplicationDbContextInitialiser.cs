@@ -104,5 +104,63 @@ public class ApplicationDbContextInitialiser
 
             await _context.SaveChangesAsync();
         }
+
+        if (!_context.Products.Any())
+        {
+            _context.Products.AddRange(
+                new Product
+                {
+                    Name = "Earl Grey",
+                    Description =
+                        "Never gunna give you up" +
+                        "Never gunna let you down" +
+                        "Never gunna run around...",
+                    Image = "",
+                    Price = 3.50
+                },
+                new Product
+                {
+                    Name = "Jasmine",
+                    Description =
+                        "Never gunna give you up" +
+                        "Never gunna let you down" +
+                        "Never gunna run around...",
+                    Image = "",
+                    Price = 3.50
+                },
+                new Product
+                {
+                    Name = "Orange Zinger",
+                    Description =
+                        "Never gunna give you up" +
+                        "Never gunna let you down" +
+                        "Never gunna run around...",
+                    Image = "",
+                    Price = 3.50
+                },
+                new Product
+                {
+                    Name = "Classic Green",
+                    Description =
+                        "Never gunna give you up" +
+                        "Never gunna let you down" +
+                        "Never gunna run around...",
+                    Image = "",
+                    Price = 3.50
+                },
+                new Product
+                {
+                    Name = "Chai",
+                    Description =
+                        "Never gunna give you up" +
+                        "Never gunna let you down" +
+                        "Never gunna run around...",
+                    Image = "",
+                    Price = 3.50
+                }
+            );
+
+            await _context.SaveChangesAsync();
+        }
     }
 }
